@@ -1,0 +1,67 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<%include ./partials/header%>
+<div class="ui main text container segment form-content">
+    <div class="ui huge header">New Blog</div>
+    <%= typeof msg !='undefined' ? msg : '' %>
+    <form class="ui form" id="form" >
+        <div class="field">
+            <label for="title">Title</label>
+            <input id="postTitle" type="text" name="blog[title]" placeholder="title">
+        </div>
+        <!-- <div class="field">
+            <label>Profile Image</label>
+            <input id='fileImage' type="file" name="image">
+        </div> -->
+        <div class="field">
+            <label>Body</label>
+            <textarea id="postBody" name="blog[body]" placeholder="body post goes here"></textarea>
+        </div>
+        <input id="write-btn" class="ui violet big button" type="submit" value="submit">
+    </form>
+</div>
+<!-- <script>
+    const form = document.getElementById("form");
+    const inputFile = document.getElementById("fileImage");
+    const inputTitle = document.getElementById("postTitle");
+    const inputPostBody = document.getElementById("postBody");
+    
+    const formData = new FormData();
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        
+        formData.append("postBody1",inputPostBody);
+        formData.append("files", inputFile);
+        
+        formData.append("postTitle1",inputTitle)
+        console.log("senfinisn")
+        console.log(formData)
+        //remove upload system
+        
+        fetch("/blogs", {
+            method: "post",
+            body: formData,
+        }).then(()=>{
+            console.log("senfinisn")
+        })
+        .catch((error) => ("Something went wrong!", error));
+    };
+    
+    form.addEventListener("submit", handleSubmit);
+</script> -->
+<%include ./partials/footer%>
+<script>
+    $("#write-btn").click(() => {
+        //   const userId = JSON.parse(window.localStorage.user).id;
+        const postfo = $("#postTitle").val();
+        const imgfo = $("#fileImage").val();
+        const bodyfo = $("#postBody").val();
+        console.log(bodyfo);
+        $.post("/blogs", { postfo,bodyfo,imgfo}, (data) => {
+            console.log(data);
+            
+        });
+    });
+</script>

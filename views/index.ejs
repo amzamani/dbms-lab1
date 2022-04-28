@@ -1,0 +1,69 @@
+<%include ./partials/header%>
+    <div class="ui labeled button" style="bottom: 30%; margin-left: 30px; float: left; position: fixed;" tabindex="0">
+        <div class="ui secondary button">
+            <strong><h3>Blog Count</h3></strong>
+        </div>
+        <a class="ui basic left pointing black label">
+            <h3>
+                <%=blogCount%>
+            </h3>
+        </a>
+    </div>
+    <div class="ui labeled button" style="bottom: 20%; margin-left: 30px; float: left; position: fixed;" tabindex="0">
+        <div class="ui secondary button">
+            <strong><h3>User Count</h3></strong>
+        </div>
+        <a class="ui basic left pointing black label">
+            <h3>
+                <%=userCount%>
+            </h3>
+        </a>
+    </div>
+    <div class="ui labeled button" style="bottom: 10%; margin-left: 30px; float: left; position: fixed " tabindex="0">
+        <div class="ui secondary button">
+            <h3><strong>Comment Count</strong></h3>
+        </div>
+        <a class="ui basic left pointing black label">
+            <h3>
+                <%=commentCount%>
+            </h3>
+        </a>
+    </div>
+    <div class="ui main text container">
+
+        <br>
+        <div class="ui top attached segment">
+            <div class="ui divided items">
+                <%blogs.forEach(function(blog){%>
+                    <div class="item">
+                        <div class="image">
+                            <img src="http://localhost:3000/images/uploaded/<%=blog.image_url%>" alt="<%=blog.title%>">
+                        </div>
+                        <div class="content">
+                            <a class="header blogs-header" href="/blogs/<%=blog.id%>">
+                                <%=blog.title%>
+                            </a>
+                            <div class="meta">
+                                <span><%=blog.created_at.toDateString()%></span>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    <% if(blog.body.length > 200){ %>
+                                        <%-blog.body.substring(0,200)%> ...
+                                            <% } else { %>
+                                                <%-blog.body.substring(0,100)%>
+                                    ...<% } %></p>
+                            </div>
+                            <div class="extra">
+                                <a class="ui floated violet inverted button" href="/blogs/<%=blog.id%>">
+                                    Read More
+                                    <i id="special" class="chevron right icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <%});%>
+            </div>
+        </div>
+    </div>
+<%include ./partials/footer%>
