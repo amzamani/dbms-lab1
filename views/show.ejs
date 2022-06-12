@@ -11,7 +11,7 @@
             <br>
             <br>
             <div class="item">
-                <img src="http://localhost:3000/images/uploaded/<%=blog.image_url%>" alt="<%=blog.title%>" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+                <!-- <img src="http://localhost:3000/images/uploaded/<%=blog.image_url%>" alt="<%=blog.title%>" style="display: block; margin-left: auto; margin-right: auto; width: 80%;"> -->
                 <br>
                 <div class="description" style="padding: 0 16px;">
                     <p>
@@ -45,7 +45,7 @@
                         <h3 style="display: inline-block;">
                             <%=comment.username%>
                         </h3>
-                        <% var date1 = new Date(); %>
+                        <!-- <% var date1 = new Date(); %>
                             <% const _MS_PER_DAY = 1000 * 60 * 60 * 24; %>
                                 <% const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate()); %>
                                     <% const utc2 = Date.UTC(comment.created_at.getFullYear(), comment.created_at.getMonth(), comment.created_at.getDate()); %>
@@ -55,11 +55,11 @@
                                             <% } else { %>
                                                 <%=Math.floor((utc2 - utc1) / _MS_PER_DAY);%>
                                             <% } %>
-                                        </span>
+                                        </span> -->
                     </div>
                     <% if(currentUser && currentUser.id == comment.user_id){ %>
                         <form style="float: right;" action="/blogs/<%= blog.id %>/<%= comment.id %>?_method=DELETE" method="POST">
-                            <button class="ui inverted red button">Delete Blog</button>
+                            <button class="ui inverted red button">Delete Comment</button>
                         </form>
                         <% } %>
                             <p style="font-size:14px;">

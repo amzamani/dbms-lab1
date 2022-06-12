@@ -36,7 +36,7 @@ app.use((req, res, next) => {
     next();
 });
 
-pool.query('USE blog_app');
+// pool.query('USE blog_app');
 global.pool = pool;
 
 passport.serializeUser((user, done) => done(null, user.id));
