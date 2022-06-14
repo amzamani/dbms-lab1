@@ -1,15 +1,18 @@
-# Blog-Site
+# BloGGing
 
 A Blog Application that provides the user the accessibility to perform most of the necessary functionalities it should contain
+
+# Deployed Link : https://abu-blog-dbms.herokuapp.com/
 
 ## Technologies Used
 
 #### Back-end
 * For handling server requests: `Node.Js (with Express Framework)`
 * As Database: `MySQL`
+* FreeMySQLhosting used in deployed version [5 MB free DB link](https://freemysqlhosting.net)
 
 #### Front-end
-* Tools: `HTML, CSS & Javascript`
+* Tools: `HTML, CSS , Javascript & EJS`
 * Framework: `Semantic UI`
 
 ## Guidelines to setup
@@ -36,12 +39,8 @@ A Blog Application that provides the user the accessibility to perform most of t
     npm start (run the server)
     ```
 
-## DEMO
+## [LIVE LINK](https://abu-blog-dbms.herokuapp.com/)
   
-#### IMAGES:
-<img src="/demo/images/1.png" width=340px /><img src="/demo/images/2.png" width=340px />
-<img src="/demo/images/3.png" width=340px /><img src="/demo/images/4.png" width=340px />
-<img src="/demo/images/5.png" width=340px /><img src="/demo/images/6.png" width=340px />
 
 
 

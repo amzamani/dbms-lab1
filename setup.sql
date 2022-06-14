@@ -1,6 +1,6 @@
--- CREATE DATABASE blog_app
+CREATE DATABASE blog_app
 
--- USE blog_app;
+USE blog_app;
 
  CREATE TABLE users(
      id INT AUTO_INCREMENT PRIMARY KEY,
