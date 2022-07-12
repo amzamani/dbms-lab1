@@ -47,13 +47,13 @@ A Blog Application that provides the user the accessibility to perform most of t
 ## SQL specific guideline
 
 ### Steps
-1. open cli and type  
+1. Open MySQL cli
 
 ```
 mysql -u root -p;
 ```
 
-2. enter root user password in CLI
+2. Enter root user password in CLI
 
 ```
 SELECT User,Host FROM mysql.user; 
@@ -74,7 +74,7 @@ grant all privileges on blog_app.*  to abc12345678;
 
 flush privileges;
 ```
-4. Change the env variables in .env file that you created
+4. Change the environment variable values to the ones created above, in .env file that you created
 
 5. Run `setup.sql` file in the mysql client
     ```
@@ -85,9 +85,9 @@ flush privileges;
 
 
 # Live Deployment
-1. Used heroku for PaaS
-2. Resources for deployment
-2. https://azure.microsoft.com/en-us/free/students/
+1. Used heroku as PaaS for deployment of Node App
+2. Azure resources followed for deployment :
+3. https://azure.microsoft.com/en-us/free/students/
 4. https://docs.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl
 5. https://docs.microsoft.com/en-us/azure/mysql/single-server/tutorial-design-database-using-portal
 6. https://docs.microsoft.com/en-us/azure/mysql/single-server/quickstart-create-mysql-server-database-using-azure-portal
