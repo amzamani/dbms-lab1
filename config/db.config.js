@@ -20,7 +20,10 @@ const pool  = mysql.createPool({
     user: 	    process.env.USER_SQL,
     password: process.env.PASSWORD,
     database: process.env.DATABASE,
+    port:3306,
+    
     multipleStatements: true
+    // ssl:{ca:fs.readFileSync("{ca-cert filename}")}
 });
 
 
