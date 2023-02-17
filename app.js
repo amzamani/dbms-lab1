@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express'),
     app = express(),
-    session = require('express-session'),
+    session = require('cookie-session'),
     bodyParser = require('body-parser'),
     expressSanitizer = require('express-sanitizer'),
     methodOverride = require('method-override'),

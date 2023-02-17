@@ -2,7 +2,7 @@
 
 A Blog Application that provides the user the accessibility to perform most of the necessary blogging functionalities 
 
-# Deployed Link : https://abu-blog-dbms.herokuapp.com/
+
 
 ## Project Report https://docs.google.com/document/d/1Em6t6r9HcJZ7vQTuBWbgcDKQBKNCUmMpMPl1Fpvycvs/edit?usp=sharing
 
@@ -94,7 +94,7 @@ flush privileges;
 
 
 
-## [LIVE LINK](https://abu-blog-dbms.herokuapp.com/)
+## [LIVE LINK](https://blogpage-a21s.onrender.com)
   
 
 
